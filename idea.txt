@@ -1,0 +1,11 @@
+It's simple really, take a abstract syntax tree and convert it into a whole bunch of different languages. Simple.
+This could be a very powerful trick, the input is json ofcorse, keeping it simple but the output can be any common enough language, or even some of the more obsure ones.
+
+Targets:
+Javascript-Node : The code is writen using node, the program could also output a package.json to run npm update
+Javascript-Web  : Writen for the web, auto imports libarys and allows for embeded html
+Python		: Good for alot of different stuff, loads of standed libarys
+C++		: This is where this trick could really shine, output to native c++
+C#		: This is a bit more complex, outputs to a series of source files and maybe a VS project file
+Java		: This will be much like C#, though outputing to a ant build file
+Ruby		: Why the hell not?

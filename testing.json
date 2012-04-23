@@ -1,0 +1,42 @@
+[
+	{
+		"name": "Program",
+		"type": "class",
+		"namespace": "vbi.Testing",
+		"transperent": true,
+		
+		"members": {
+			"strTest": {
+				"type": "field",
+				"value": {
+					"type": "const",
+					"valueType": "string",
+					"value": "hello world"
+				}
+			},
+
+			"main": {
+				"type": "method",
+				"returnType": "void",
+				"entry": true,
+				"args": [
+				],
+				"code": [
+					{
+						"type": "nativeCall",
+						"method": "println",
+						"args": [
+							{
+								"type": "getConst",
+								"value": "strTest"
+							}
+						]
+					},
+					{
+						"type": "return"
+					}
+				]
+			}
+		}
+	}
+]
