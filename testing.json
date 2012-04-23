@@ -33,6 +33,26 @@
 						]
 					},
 					{
+						"type": "nativeCall",
+						"method": "println",
+						"args": [
+							{
+								"type": "expression",
+								"expressionType": "+",
+								"item1": {
+									"type": "const",
+									"valueType": "int",
+									"value": 10
+								},
+								"item2": {
+									"type": "const",
+									"valueType": "int",
+									"value": 20
+								}
+							}
+						]
+					},
+					{
 						"type": "return"
 					}
 				]

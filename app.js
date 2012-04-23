@@ -27,6 +27,21 @@ valueTypes = {
 				header.push("#include <string>");
 			}
 			return "std::string";
+		},
+		"int": function (block, parent) {
+			return "int";
+		},
+		"long": function (block, parent) {
+			return "long";
+		},
+		"char": function (block, parent) {
+			return "char";
+		},
+		"byte": function (block, parent) {
+			return "char";
+		},
+		"float": function (block, parent) {
+			return "float";
 		}
 	}
 };
@@ -60,8 +75,22 @@ methods = {
 			return str;
 		},
 
+		"expression": function (block, parent, args) {
+			if (block.expressionType == "+" || block.expressionType == "-" ||
+					block.expressionType == "*" || block.expressionType == "/" ||
+					block.expressionType == "^") {
+				return getValue(block.item1) + " " + block.expressionType + " " + getValue(block.item2);
+			} else {
+
+			}
+		},
+
 		"const": function (block, parent, args) {
-			return "\"" + block.value + "\"";
+			if (block.valueType == "string") {
+				return "\"" + block.value + "\"";
+			} else {
+				return block.value;
+			}
 		},
 
 		"field": function (block, parent, args) {
